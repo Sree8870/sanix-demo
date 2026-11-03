@@ -1,2 +1,1 @@
-# sanix-demo
-Github destop demo
+# Habit streak Tracker
