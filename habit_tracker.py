@@ -28,7 +28,7 @@ def streak(dates):
 def main():
     data = load()
     while True:
-        print("\n1.Add habit  2.Check in today  3.View streaks  4.Exit")
+        print("\n1.Add habit  2.Check in today  3.View streaks  4.Exit 5.deletehabit")
         choice = input("Choose: ").strip()
         if choice == "1":
             name = input("Habit name: ").strip()
@@ -47,6 +47,14 @@ def main():
                 print(f"{name}: {streak(dates)} day streak")
         elif choice == "4":
             break
+        elif choice == "5":
+            name = input("Habit to delete: ").strip()
+            if name in data:
+                del data[name]
+                print("Deleted!")
+            else:
+                print("Habit not found.")
+
         save(data)
 
 main()
